@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/details"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/loc_detail_img"
+        android:layout_width="fill_parent"
+        android:layout_height="210dp"
+        android:src="@drawable/food_img"
+        android:scaleType="fitXY" />
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/loc_detail_img"
+        android:background="#d3d3d3" >
+    </View>
+
+    <View
+        android:id="@+id/horizontalLine2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/horizontalLine"
+        android:layout_marginTop="50dp"
+        android:background="#d3d3d3" >
+    </View>
+    
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/horizontalLine2"
+        android:layout_marginTop="18dp"
+        android:paddingLeft="2dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+
+    <TextView
+        android:id="@+id/websiteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="2dp"
+        android:text="Website"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/websiteAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/websiteTitle"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="2dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:text="www.google.com"
+        android:textSize="15sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/loc_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loc_details_address"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Mc Donalds"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/loc_details_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loc_details_info"
+      	android:paddingLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Basavanagudi"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/loc_details_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/loc_detail_img"
+  		android:paddingLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Bangalore"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/verticalLine2"
+        android:layout_width="2dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/description"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/loc_details_address"
+        android:background="#d3d3d3" />
+
+    <ImageView
+        android:id="@+id/gplus_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/twitter_icon"
+        android:layout_marginRight="14dp"
+        android:clickable="true"
+        android:src="@drawable/gplus_icon" />
+
+    <ImageView
+        android:id="@+id/fb_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/websiteTitle"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:layout_toLeftOf="@+id/twitter_icon"
+        android:src="@drawable/fb_icon" />
+
+    <ImageView
+        android:id="@+id/twitter_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/fb_icon"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/gplus_icon"
+        android:src="@drawable/twitter_icon"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/verticalLine1"
+        android:layout_width="2dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/description"
+        android:layout_alignRight="@+id/fb_icon"
+        android:background="#d3d3d3" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/verticalLine1"
+        android:layout_centerHorizontal="true"
+        android:text="Phone" />
+
+    <TextView
+        android:id="@+id/txtPhoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/horizontalLine2"
+        android:layout_below="@+id/txtPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="9880613011" 
+        android:autoLink="phone"/>
+    
+</RelativeLayout>

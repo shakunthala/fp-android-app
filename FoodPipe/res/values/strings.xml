@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Food Pipe</string>
+    <string name="email_id">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="app_id">932996653377745</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search..</string>
+    
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Find</item>
+        <item>Favorite</item>
+        <item>Settings</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_action_search</item>
+        <item>@drawable/ic_action_favorite</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/device_white_ovf</item>
+
+      
+    </array>
+    
+
+</resources>
