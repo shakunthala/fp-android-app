@@ -10,10 +10,13 @@ import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -30,7 +33,7 @@ public class LoginActivity extends FragmentActivity
 		com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener {
 
 	EditText userName, passWord;
-	Button login;
+	Button login, signUp;
 	private MainFragment mainFragment;
 	private static final String TAG = "LoginActivity";
 
@@ -70,12 +73,19 @@ public class LoginActivity extends FragmentActivity
 		userName = (EditText) findViewById(R.id.txtUsername);
 		passWord = (EditText) findViewById(R.id.txtPassword);
 		login = (Button) findViewById(R.id.btnLogin);
-
+		signUp = (Button) findViewById(R.id.SignUp);
 		// For setting hint inside the EditText.
 		userName.setHint(Html.fromHtml("<large>"
 				+ getResources().getString(R.string.email_id) + "</large>"));
 		passWord.setHint(Html.fromHtml("<medium>"
 				+ getResources().getString(R.string.password) + "</medium>"));
+		
+
+		
+		//To have underline for Text
+//		SpannableString content = new SpannableString("Login");
+//		content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+//		btnLogin.setText(content);
 
 		login.setOnClickListener(new View.OnClickListener() {
 
@@ -93,6 +103,32 @@ public class LoginActivity extends FragmentActivity
 						DashboardActivity.class);
 				startActivity(dashBoardIntent);
 				dashBoardIntent = null;
+				finish();
+
+			}
+		});
+		
+	
+//		SpannableString btnContent = new SpannableString("SignUp");
+//		content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+//		btnSignUp.setText(content);
+//
+		signUp.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				// For now, if the user clicks on the login button app will
+				// direct to DashboardActivity.
+				// Later - login credentials to be added, if it is valid the
+				// app
+				// will direct to DashboardActivity.
+
+				Intent signupIntent = new Intent(getApplicationContext(),
+						SignUpActivity.class);
+				startActivity(signupIntent);
+				signupIntent = null;
 				finish();
 
 			}

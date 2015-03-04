@@ -163,5 +163,15 @@
         android:layout_marginTop="2dp"
         android:text="9880613011" 
         android:autoLink="phone"/>
+
+    <Button
+        android:id="@+id/orderNowButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/round_corner_button"
+        android:text="ORDER NOW"
+        android:textColor="#ffffff" />
     
 </RelativeLayout>

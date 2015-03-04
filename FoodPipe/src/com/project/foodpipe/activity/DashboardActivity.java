@@ -25,7 +25,7 @@ import com.project.foodpipe.adapters.GridViewAdapter;
 public class DashboardActivity extends NavigationDrawerActivity {
 	ImageView imageView;
 	GridView gridView;
-	String[] imageTitle = { "Bars", "Coffee Shops", "Concerts", "Restaurants" };
+	String[] imageTitle = { "Table Ordering", "Take Away", "Home Delivery", "Book a Table  " };
 	int[] imageId = { R.drawable.beer_img, R.drawable.coffee_img,
 			R.drawable.concert_img, R.drawable.hotel_img };
 
