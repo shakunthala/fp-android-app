@@ -31,45 +31,12 @@ public class MenuDetailsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu_page);
 		menuListView = (ListView) findViewById(R.id.menuList);
-		btnMenuDetails = (Button) findViewById(R.id.btnDetails);
+	
 		MenuListAdapter adapter = new MenuListAdapter(MenuDetailsActivity.this,
 				menuTitle, menuSubTitle, menuImageId);
 		menuListView.setAdapter((ListAdapter) adapter);
 
-		// // Directing the screen to details page on click of list item.
-		// menuListView
-		// .setOnItemClickListener(new
-		// android.widget.AdapterView.OnItemClickListener() {
-		// @Override
-		// public void onItemClick(AdapterView<?> parent, View view,
-		// int position, long id) {
-		// Object item = menuListView.getItemAtPosition(position);
-		// Intent detailsIntent = new Intent(
-		// MenuDetailsActivity.this, DetailsActivity.class);
-		// startActivity(detailsIntent);
-		// }
-		// });
 
-		// btnMenuDetails.setOnClickListener(new View.OnClickListener() {
-		//
-		// @Override
-		// public void onClick(View v) {
-		// // TODO Auto-generated method stub
-		//
-		// // For now, if the user clicks on the login button app will
-		// // direct to DashboardActivity.
-		// // Later - login credentials to be added, if it is valid the
-		// // app
-		// // will direct to DashboardActivity.
-		//
-		// Intent dashBoardIntent = new Intent(getApplicationContext(),
-		// DetailsActivity.class);
-		// startActivity(dashBoardIntent);
-		// dashBoardIntent = null;
-		// finish();
-		//
-		// }
-		// });
 	}
 
 }
