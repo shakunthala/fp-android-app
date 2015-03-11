@@ -38,7 +38,7 @@ public class ListTabView extends Activity {
 					int position, long id) {
 				Object item = listTabView.getItemAtPosition(position);
 				Intent detailsIntent = new Intent(
-						ListTabView.this, MenuDetailsActivity.class);
+						ListTabView.this, DetailsActivity.class);
 				startActivity(detailsIntent);
 			}
 		});

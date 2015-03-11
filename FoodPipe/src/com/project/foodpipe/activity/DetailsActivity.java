@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.project.foodpipe.R;
@@ -19,6 +20,7 @@ public class DetailsActivity extends Activity {
 
 	TextView webSiteLink;
 	ImageView fbIcon, twitterIcon, gPlusIcon;
+	Button orderNow;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +32,22 @@ public class DetailsActivity extends Activity {
 		fbIcon = (ImageView) findViewById(R.id.fb_icon);
 		twitterIcon = (ImageView) findViewById(R.id.twitter_icon);
 		gPlusIcon = (ImageView) findViewById(R.id.gplus_icon);
-
+		
+		orderNow = (Button) findViewById(R.id.orderNowButton);
+		
 		webSiteLink.setMovementMethod(LinkMovementMethod.getInstance());
+		
+		
+		//onClick of ORDER NOW button, app should direct to Category page.
+		orderNow.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent sendToCategory = new Intent(DetailsActivity.this,CategoryActivity.class);
+				startActivity(sendToCategory);
+			}
+		});
 
 		fbIcon.setOnClickListener(new View.OnClickListener() {
 			@Override

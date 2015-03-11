@@ -32,11 +32,24 @@ public class MenuDetailsActivity extends Activity {
 		setContentView(R.layout.activity_menu_page);
 		menuListView = (ListView) findViewById(R.id.menuList);
 	
+//		btnMenuDetails = (Button) findViewById(R.id.btnDetails);
+	
+		
 		MenuListAdapter adapter = new MenuListAdapter(MenuDetailsActivity.this,
 				menuTitle, menuSubTitle, menuImageId);
 		menuListView.setAdapter((ListAdapter) adapter);
-
-
+//
+//		btnMenuDetails.setOnClickListener(new View.OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				//What has to be done here???
+//				//From onClick of Details...
+//			}
+//		});
+//		
+		
 	}
 
 }

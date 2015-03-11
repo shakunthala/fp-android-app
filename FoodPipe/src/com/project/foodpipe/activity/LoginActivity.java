@@ -36,6 +36,7 @@ public class LoginActivity extends FragmentActivity
 	Button login, signUp;
 	private MainFragment mainFragment;
 	private static final String TAG = "LoginActivity";
+	boolean loggedIntoGPlus, loggedIntoFB, normalLogin = false;
 
 	/* Request code used to invoke sign in user interactions. */
 	private static final int RC_SIGN_IN = 0;
@@ -194,9 +195,10 @@ public class LoginActivity extends FragmentActivity
 	public void onConnected(Bundle connectionHint) {
 		// We've resolved any connection errors. mGoogleApiClient can be used to
 		// access Google APIs on behalf of the user.
-
+		Intent gotoDashboard = new Intent(LoginActivity.this, DashboardActivity.class);
+		startActivity(gotoDashboard);
 		mSignInClicked = false;
-		Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+		//Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
 	}
 
 	@Override

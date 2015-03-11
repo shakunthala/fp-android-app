@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,6 +22,11 @@ public class MapTabView extends Activity {
   static final LatLng MYSORE = new LatLng(12.3000, 76.6500);
   private GoogleMap map;
 
+//GPSTracker class
+  GPSTracker gps;
+
+  double latitude,longitude;
+  
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -29,6 +35,25 @@ public class MapTabView extends Activity {
         .getMap();
     map.setMyLocationEnabled(true);
 
+    gps = new GPSTracker(MapTabView.this);
+    
+    
+    // check if GPS enabled     
+    if(gps.canGetLocation()){
+         
+         latitude = gps.getLatitude();
+         longitude = gps.getLongitude();
+         
+        // \n is for new line
+        Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();    
+    }else{
+        // can't get location
+        // GPS or Network is not enabled
+        // Ask user to enable GPS/network in settings
+        gps.showSettingsAlert();
+    }
+     
+    
     Marker bangalore = map.addMarker(new MarkerOptions().position(BANGALORE)
         .title("Vidyarthi Bhavan")
         .snippet("Basavanagudi, Bangalore")
@@ -42,10 +67,10 @@ public class MapTabView extends Activity {
  //   kiel.showInfoWindow();
 	
     // Move the camera instantly to hamburg with a zoom of 15.
-    map.moveCamera(CameraUpdateFactory.newLatLngZoom(BANGALORE, 15));
-
-    // Zoom in, animating the camera.
-    map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+//    map.moveCamera(CameraUpdateFactory.newLatLngZoom(BANGALORE, 15));
+//
+//    // Zoom in, animating the camera.
+//    map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
     //This method is used when we click on marker.
     //But requirement is to direct the user to details page when we click on infoWindo().
     
@@ -63,6 +88,8 @@ public class MapTabView extends Activity {
 //
 //    });   
 
+     map.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(latitude,longitude) , 14.0f) );
+    
     //This is infoWindo click listener. ie, the pop up which is showed when we click on marker.
     map.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
 

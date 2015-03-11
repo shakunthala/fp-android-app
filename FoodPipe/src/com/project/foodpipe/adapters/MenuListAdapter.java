@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.ecommerce.Product;
 import com.project.foodpipe.R;
 import com.project.foodpipe.activity.DetailsActivity;
 import com.project.foodpipe.activity.MenuDetailsActivity;
@@ -20,7 +21,7 @@ public class MenuListAdapter extends BaseAdapter {
 	private final String[] menuTitle;
 	private final String[] menuDesc;
 	private final int[] Imageid;
-
+	
 	public MenuListAdapter(Context c, String[] menuTitle,
 			String[] menuSubTitle, int[] menuImageId) {
 		mContext = c;
@@ -52,7 +53,7 @@ public class MenuListAdapter extends BaseAdapter {
 		public TextView title;
 		public TextView subTitle;
 		public ImageView image;
-		public Button btn;
+		public Button details, addMenu;
 
 	}
 
@@ -72,10 +73,13 @@ public class MenuListAdapter extends BaseAdapter {
 			TextView distView = (TextView) v.findViewById(R.id.menuDesc);
 			ImageView img = (ImageView) v.findViewById(R.id.menu_img);
 			Button btnMenuDetails = (Button) v.findViewById(R.id.btnDetails);
+			Button addToCart = (Button) v.findViewById(R.id.btnAddMenu);
+
 			holder.title = tv;
 			holder.subTitle = distView;
 			holder.image = img;
-			holder.btn = btnMenuDetails;
+			holder.details = btnMenuDetails;
+			holder.addMenu = addToCart;
 			v.setTag(holder);
 		} else
 			holder = (ViewHolder) v.getTag();
@@ -87,7 +91,7 @@ public class MenuListAdapter extends BaseAdapter {
 
 		holder.image.setImageResource(Imageid[position]);
 
-		holder.btn.setOnClickListener(new View.OnClickListener() {
+		holder.details.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -96,6 +100,16 @@ public class MenuListAdapter extends BaseAdapter {
 						DetailsActivity.class);
 				mContext.startActivity(dashBoardIntent);
 				dashBoardIntent = null;
+
+			}
+		});
+
+		// Add to cart functionality needs to be implemented here..
+		holder.addMenu.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
 
 			}
 		});
