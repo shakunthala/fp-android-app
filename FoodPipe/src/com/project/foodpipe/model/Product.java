@@ -1,35 +1,21 @@
 package com.project.foodpipe.model;
 
-import java.util.ArrayList;
+import android.graphics.drawable.Drawable;
 
-import android.app.Application;
+public class Product {
 
-public class Product extends Application{
-    
-   private  ArrayList<CartProducts> myProducts = new ArrayList<CartProducts>();
-   private  ModelCart myCart = new ModelCart();
-    
+	public String title;
+	public Drawable productImage;
+	public String description;
+	public double price;
+	public boolean selected;
 
-   public CartProducts getProducts(int pPosition) {
-        
-       return myProducts.get(pPosition);
-   }
-    
-   public void setProducts(CartProducts Products) {
-       
-       myProducts.add(Products);
-        
-   }   
-    
-   public ModelCart getCart() {
-           
-       return myCart;
-        
-   }
- 
-  public int getProductsArraylistSize() {
-        
-       return myProducts.size();
-   }
-   
+	public Product(String title, Drawable productImage, String description,
+			double price) {
+		this.title = title;
+		this.productImage = productImage;
+		this.description = description;
+		this.price = price;
+	}
+
 }

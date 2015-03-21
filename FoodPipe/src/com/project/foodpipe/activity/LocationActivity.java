@@ -68,6 +68,8 @@ public class LocationActivity extends TabActivity {
 				.getActionView();
 		searchView.setSearchableInfo(searchManager
 				.getSearchableInfo(getComponentName()));
+		
+		menu.findItem(R.id.action_add_to_cart).setVisible(false);
 
 		return true;
 

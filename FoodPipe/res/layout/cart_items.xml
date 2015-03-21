@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/editProductQuantity"
+        android:layout_marginLeft="30dp"
+        android:text="Menu-I" />
+
+    <TextView
+        android:id="@+id/productRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editProductQuantity"
+        android:layout_alignLeft="@+id/productName"
+        android:text="Rate"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/editProductQuantity"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/productCancel"
+        android:layout_marginLeft="78dp"
+        android:layout_toRightOf="@+id/productName"
+        android:ems="10"
+        android:gravity="center"
+        android:text="1" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/productCancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_action_cancel" />
+
+</RelativeLayout>

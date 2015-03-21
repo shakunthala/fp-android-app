@@ -3,7 +3,6 @@ package com.project.foodpipe.adapters;
 import com.project.foodpipe.R;
 import com.project.foodpipe.activity.CategoryActivity;
 import com.project.foodpipe.activity.DetailsActivity;
-import com.project.foodpipe.adapters.MenuListAdapter.ViewHolder;
 
 import android.content.Context;
 import android.content.Intent;

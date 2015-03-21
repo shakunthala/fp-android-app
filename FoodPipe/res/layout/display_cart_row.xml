@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/productcancelimageView"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_action_cancel" />
+
+    <EditText
+        android:id="@+id/productDisplayeditText"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/productcancelimageView"
+        android:layout_marginRight="62dp"
+        android:layout_toLeftOf="@+id/productcancelimageView"
+        android:ems="10"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/productTitle"
+        android:layout_alignTop="@+id/productDisplayeditText"
+        android:text="TextView"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/productDisplayeditText"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:text="TextView" />
+
+</RelativeLayout>

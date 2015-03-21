@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    
+    <ListView
+        android:id="@+id/cartList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:choiceMode="singleChoice">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/makePayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/round_corner_button"
+            android:text="PROCEED TO CHECKOUT"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

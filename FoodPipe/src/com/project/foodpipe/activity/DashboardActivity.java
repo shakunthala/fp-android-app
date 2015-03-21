@@ -26,10 +26,12 @@ import com.project.foodpipe.adapters.GridViewAdapter;
 public class DashboardActivity extends NavigationDrawerActivity {
 	ImageView imageView;
 	GridView gridView;
+	
+	//These values needs to be moved to string file.
 	String[] imageTitle = { "Table Ordering", "Take Away", "Home Delivery",
 			"Book a Table  " };
-	int[] imageId = { R.drawable.beer_img, R.drawable.coffee_img,
-			R.drawable.concert_img, R.drawable.hotel_img };
+	int[] imageId = { R.drawable.dining, R.drawable.take_away,
+			R.drawable.delivery, R.drawable.table };
 
 	// Check whether Location is ON or NOT.
 	boolean isGPSEnabled = false;
@@ -157,6 +159,7 @@ public class DashboardActivity extends NavigationDrawerActivity {
 		searchView.setSearchableInfo(searchManager
 				.getSearchableInfo(getComponentName()));
 
+		menu.findItem(R.id.action_add_to_cart).setVisible(false);
 		return true;
 
 	}

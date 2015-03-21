@@ -1,8 +1,6 @@
 package com.project.foodpipe.activity;
 
-import com.google.android.gms.internal.ll;
 import com.project.foodpipe.R;
-import com.project.foodpipe.adapters.GridViewAdapter;
 import com.project.foodpipe.adapters.LocationListDetailsAdapter;
 
 import android.app.Activity;
@@ -17,8 +15,8 @@ public class ListTabView extends Activity {
 	
 	String[] locTitle = { "Bars", "Coffee Shops", "Concerts", "Restaurants" };
 	String[] locSubTitle = { "Bars", "Coffee Shops", "Concerts", "Restaurants" };
-	int[] locImageId = { R.drawable.beer_img, R.drawable.coffee_img,
-			R.drawable.concert_img, R.drawable.hotel_img };
+	int[] locImageId = { R.drawable.dining, R.drawable.take_away,
+			R.drawable.delivery, R.drawable.table };
 	ListView listTabView;
 	 @Override
 	  protected void onCreate(Bundle savedInstanceState) {

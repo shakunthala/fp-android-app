@@ -1,6 +1,7 @@
 package com.project.foodpipe.activity;
 
 import com.project.foodpipe.R;
+import com.project.foodpipe.util.SharedPreferenceManager;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,7 +26,7 @@ public class SplashActivity extends Activity {
 				return;
 			}
 		}
-
+		SharedPreferenceManager.setApplicationContext(getApplicationContext());
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_splash);
 		load();

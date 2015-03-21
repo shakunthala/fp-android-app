@@ -2,11 +2,15 @@ package com.project.foodpipe.activity;
 
 import com.project.foodpipe.R;
 import com.project.foodpipe.adapters.CategoryArrayAdapter;
-import com.project.foodpipe.adapters.MenuListAdapter;
+import com.project.foodpipe.helper.ShoppingCartHelper;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -41,7 +45,8 @@ public class CategoryActivity extends Activity {
 				Object item = categoryList.getItemAtPosition(position);
 				//Need to pass the id of the category in Intent.putExtra() to display menu details under that particular category in menu page.
 				//For now, only sending the intent.
-				Intent menuDetailsIntent = new Intent(CategoryActivity.this, MenuDetailsActivity.class);
+
+				Intent menuDetailsIntent = new Intent(CategoryActivity.this, MenuPageActivity.class);
 				startActivity(menuDetailsIntent);
 			}
 		});
